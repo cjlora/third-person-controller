@@ -17,7 +17,9 @@ public class CharacterAnimations : MonoBehaviour
     void Update()
     {
         bool isWalking = animator.GetBool("isWalking");
+        bool isRunning = animator.GetBool("isRunning");
         bool forwardPressed = Input.GetKey("w");
+        bool runPressed = Input.GetKey("left shift");
 
         if (!isWalking && forwardPressed)
         {
@@ -27,6 +29,16 @@ public class CharacterAnimations : MonoBehaviour
         if (isWalking && !forwardPressed)
         {
             animator.SetBool("isWalking", false);
+        }
+
+        if (!isRunning && (forwardPressed && runPressed))
+        {
+            animator.SetBool("isRunning", true);
+        }
+
+        if (isRunning && (!forwardPressed || !runPressed))
+        {
+            animator.SetBool("isRunning", false);
         }
     }
 }
