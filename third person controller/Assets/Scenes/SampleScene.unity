@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 84662546}
   - component: {fileID: 84662547}
+  - component: {fileID: 84662548}
   m_Layer: 0
   m_Name: Third Person Player
   m_TagString: Untagged
@@ -173,6 +174,18 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &84662548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84662545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5903ef8f30aa85e40b3bfd04bbe5a0a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &85867657
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,7 +647,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 920565263}
-  m_LocalRotation: {x: 0.21300696, y: -5.089909e-15, z: 2.1797004e-15, w: 0.9770507}
+  m_LocalRotation: {x: 0.21300694, y: 0.000000032555334, z: -0.0000000070973925, w: 0.9770507}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
