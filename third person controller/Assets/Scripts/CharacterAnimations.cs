@@ -18,25 +18,25 @@ public class CharacterAnimations : MonoBehaviour
     {
         bool isWalking = animator.GetBool("isWalking");
         bool isRunning = animator.GetBool("isRunning");
-        bool forwardPressed = Input.GetKey("w");
+        bool movementPressed = Input.GetKey("w") || Input.GetKey("s") || Input.GetKey("a") || Input.GetKey("d");
         bool runPressed = Input.GetKey("left shift");
 
-        if (!isWalking && forwardPressed)
+        if (!isWalking && movementPressed)
         {
             animator.SetBool("isWalking", true);
         }
 
-        if (isWalking && !forwardPressed)
+        if (isWalking && !movementPressed)
         {
             animator.SetBool("isWalking", false);
         }
 
-        if (!isRunning && (forwardPressed && runPressed))
+        if (!isRunning && (movementPressed && runPressed))
         {
             animator.SetBool("isRunning", true);
         }
 
-        if (isRunning && (!forwardPressed || !runPressed))
+        if (isRunning && (!movementPressed || !runPressed))
         {
             animator.SetBool("isRunning", false);
         }
