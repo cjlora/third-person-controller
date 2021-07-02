@@ -8,11 +8,18 @@ public class ThirdPersonMovement : MonoBehaviour
     public Transform cam;
 
 
+
     public float speed = 6f;
 
     public float turnSmoothTime = 0.1f;
 
     float turnSmoothVelocity;
+
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked; 
+        Cursor.visible = false;
+    }
 
     // Update is called once per frame
     void Update()
