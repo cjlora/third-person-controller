@@ -16,9 +16,17 @@ public class CharacterAnimations : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("w"))
+        bool isWalking = animator.GetBool("isWalking");
+        bool forwardPressed = Input.GetKey("w");
+
+        if (!isWalking && forwardPressed)
         {
             animator.SetBool("isWalking", true);
+        }
+
+        if (isWalking && !forwardPressed)
+        {
+            animator.SetBool("isWalking", false);
         }
     }
 }
