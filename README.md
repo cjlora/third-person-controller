@@ -1,4 +1,4 @@
 # third-person-controller
 character on 3rd person perspective with animation
 
-description here
+based on Brackeys' tutorial: https://www.youtube.com/watch?v=4HpC--2iowE&list=LL&index=1
